@@ -88,9 +88,9 @@ public class Read extends HttpServlet {
                 dispatcher.forward(request, response);
         
         
-        /* u might need this. 
+        
         processRequest(request, response);
-        */
+       
     }
 
     /**

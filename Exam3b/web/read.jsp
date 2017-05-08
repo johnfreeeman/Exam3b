@@ -6,11 +6,12 @@
         <title>BRANDYOU CUSTOMERS</title>
         <link rel="stylesheet" type="text/css" href="newcss.css"/>
     </head>
-
-    <% String table = (String) request.getAttribute("table");%>
-
-
     <body>
+
+    <div class="container">
+    <% String table = (String) request.getAttribute("table");%>
+    </div>
+
         <div class="wrap">
 
             <%@ include file="includes/header.jsp" %>

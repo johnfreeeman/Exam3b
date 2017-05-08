@@ -13,43 +13,45 @@
 
             <%@ include file="includes/menu.jsp" %>
         
-<div class="main">
-
+    <div class="main">
 
             <h1>Add New Customer Record</h1>
 
             <div class="add">
-                <form name ="addForm" action ="addStudent" method ="get">
+                <form name ="addForm" action ="addCustomer" method ="get">
 
                     
                     <hr><hr>
                     <label>First Name:</label>
-                    <input type="text" name="firstName" value="" required/>
+                    <br>
+                    <input type="text" name="firstName" value="" required data-validation-required-message="Please enter first name" pattern="[a-zA-Z]+(['-][a-zA-Z]+)*" autofocus title="Please enter alphabet only">
                     <br>
 
                     <label>Last Name:</label>
-                    <input type="text" name="lastName" value="" required/>
+                    <br>
+                    <input type="text" name="lastName" value="" required data-validation-required-message="Please enter first name" pattern="[a-zA-Z]+(['-][a-zA-Z]+)*" autofocus title="Please enter alphabet only">
                     <br>
                     <hr>
 
                     <label>Address 1:</label>
                     <br>
-                    <input type="text" name="addr1:" value="" required/> <!--pattern='[\+]\d{2}[\()\d{2}[\]]\d{4}[\-]\d{4}' title= "*(Required):Invalid number" /> doesn't work for some reason-->
+                    <input type="text" name="addr1:" value="" required data-validation-required-message="Please enter address" pattern="\d+\s{1}([a-zA-Z]{2,}[.]?" autofocus title="ex) 123 Abc St">
 
                     <br>
                     <label>Address 2:</label>
                     <br>
-                    <input type="text" name="addr2:" value="" required/> <!--pattern='[\+]\d{2}[\()\d{2}[\]]\d{4}[\-]\d{4}' title= "*(Required):Invalid number" /> doesn't work for some reason-->
+                    <input type="text" name="addr2:" value="" title="ex. Apt 3"> 
                     
                     <br><br>
                     <label>City:</label>
                     <br>
-                    <input type="text" name="address" value="" />
+                    <input type="text" name="city" value="" required data-validation-required-message="Please enter city">
                     <br>
+                    
                     <br>
                     <label>State:</label>
                     <label for="State"></label>
-                    <select id="State" name="state">
+                    <select id="State" name="state" required data-validation-required-message="Please select State">
                         <option value = "---Select---" selected> ---Select--- </option>
                         <option value = "Alabama"> AL </option>
                         <option value = "Colorado"> CO </option>
@@ -61,27 +63,13 @@
                     
                     <label>Zip Code:</label>
                     <br>
-                    <input type="text" name="address" value="" />
+                    <input type="text" name="zip" value="" required data-validation-required-message="Please enter Zip Code" pattern="\d{5}" autofocus title="Please enter 5 digits">
                     <br>
                     <hr>
-                    <!----------------when changed to dropbox, check input values
-                    <label>State:</label>
-                     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                    <label for="State"></label>
-                    <select id="State" name="state">
-                        <option value = "---Select---" selected> ---Select--- </option>
-                        <option value = "Alabama"> AL </option>
-                        <option value = "Colorado"> CO </option>
-                        <option value = "Florida"> FL</option>
-                    <option value = "Iowa"> IA</option>
-                    <option value = "Minnesota"> MN</option>
-                    </select>
-                    <br>
-                    ----------->
-                    
+
                     <label>Email Address:</label>
                     <br>
-                    <input type="text" name="city" value="" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"title="*(Required):example@mail.com"/>
+                    <input type="text" name="emailAddr" value="" required data-validation-required-message="Please enter Zip Code" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="ex) example@mail.com">
                     <br><br>
 
                     <hr>        

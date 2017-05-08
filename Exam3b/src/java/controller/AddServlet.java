@@ -1,3 +1,4 @@
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -85,7 +86,7 @@ public class AddServlet extends HttpServlet {
         String city = request.getParameter("city");
         String state = request.getParameter("address");
         String zip = request.getParameter("zip");
-        String emailAddr = request.getParameter("phone");
+        String emailAddr = request.getParameter("emailAddr");
       
         //set up a object
         Customers customer = new Customers();

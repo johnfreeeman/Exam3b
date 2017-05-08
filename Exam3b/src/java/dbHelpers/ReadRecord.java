@@ -77,7 +77,7 @@ public class ReadRecord {
             customer.setZip(this.results.getString("zip"));
             customer.setEmailAddr(this.results.getString("emailAddr"));
             
-        } catch (SQLException ex) {
+        } catch (SQLException ex) { 
             Logger.getLogger(ReadRecord.class.getName()).log(Level.SEVERE, null, ex);
         }
         

@@ -107,8 +107,9 @@ public class ReadQuery {
  
                     table += "<th>";
                     table += "Manage";
-                    table += "</th>";
-                    table += "</tr>";
+                    table += "</th>"; 
+                    
+                table += "</tr>";
                     
                 table += "</thead>";
                 
@@ -123,6 +124,7 @@ public class ReadQuery {
                 customer.setCity(this.results.getString("city"));
                 customer.setState(this.results.getString("state"));
                 customer.setZip(this.results.getString("zip"));
+                customer.setEmailAddr(this.results.getString("emailAddr"));
 
                 table += "<tr>";
                 
@@ -162,17 +164,13 @@ public class ReadQuery {
                 table += "<td>";
                     table += customer.getEmailAddr();
                 table += "</td>";
-                
-                table += "<td>";
-                    table += customer.getZip();
-                table += "</td>";             
-                
-                /*table += "<td>";
-                    table += "<a href = update?custID=" + customer.getCustID() + "> Admin Mode </a>";
+
+                 table += "<td>";
+                    table += "<a href = update?custID=" + customer.getCustID() + "> Update </button> </a> <a href = delete?custID=" + customer.getCustID() + "> Delete </a>";
                 table += "</td>";
                 
                 table += "</tr>";
-                not used for now bc Im not gonna put Detail link to to each row*/
+                /*not used for now bc Im not gonna put Detail link to to each row*/
             }
         } catch (SQLException ex) {
             Logger.getLogger(ReadQuery.class.getName()).log(Level.SEVERE, null, ex);

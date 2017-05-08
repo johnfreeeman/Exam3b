@@ -78,8 +78,8 @@ public class UpdateServlet extends HttpServlet {
             throws ServletException, IOException {
         
          
-        //get the form data and set up a Student object
-        int custID = Integer.parseInt(request.getParameter("custID"));
+        //get the form data and set up a Customer object
+       
         String firstName = request.getParameter("firstName");
         String lastName = request.getParameter("lastName");
         String addr1 = request.getParameter("addr1");
@@ -91,8 +91,7 @@ public class UpdateServlet extends HttpServlet {
 
         
            Customers customer = new Customers();
-           
-                customer.setCustID(custID);
+
                 customer.setFirstName(firstName);
                 customer.setLastName(lastName);
                 customer.setAddr1(addr1);
